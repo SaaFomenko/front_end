@@ -15,7 +15,7 @@ ok flag for accept user
 """
 
 ok = 'y'
-dirs = {"app": ['css', 'fronts', 'img', 'js', 'sass'],
+dirs = {"app": ['css', 'fronts', 'libs', 'img', 'js', 'sass'],
         "dist": 0}
 
 
