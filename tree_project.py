@@ -1,13 +1,23 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
+"""
+Python 2.7.12
+This script for fast creat dirs project front-end
+"""
+
 import os
 
-'''define dirs'''
+"""
+Define dirs, keys dictonary top dirs project, values subdirs.
+If dir not contein subdirs, value = 0
+ok flag for accept user
+"""
+
 ok = 'y'
 dirs = {"app": ['css', 'fronts', 'img', 'js', 'sass'],
         "dist": 0}
+
 
 def make_dir(new_dir):
     """TODO: Docstring for make_dir. Make only dir top level.
@@ -30,9 +40,9 @@ def make_dirs(new_dir):
     try:
         os.makedirs(new_dir)
     except OSError:
-         print('Create dirs ' + new_dir + ' do NOT possible')
+        print('Create dirs ' + new_dir + ' do NOT possible')
     else:
-         print('Create dirs ' + new_dir + ' do possible')
+        print('Create dirs ' + new_dir + ' do possible')
 
 
 def creat_dirs(dirs):
@@ -55,5 +65,6 @@ def creat_dirs(dirs):
                 for i in v:
                     new_dir = path + '/' + k + '/' + i
                     make_dirs(new_dir)
+
 
 creat_dirs(dirs)
